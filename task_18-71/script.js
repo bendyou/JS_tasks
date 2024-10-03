@@ -993,3 +993,336 @@
         console.log(arr);
     });
     document.getElementById('buttonContainer118').appendChild(button118);
+
+    const button119 = document.createElement('button');
+    button119.innerText = '72_1';
+    button119.addEventListener('click', function() {
+        let arr = [11, 12, 13];
+
+        arr[0] += 3;
+        arr[1] += 3;
+        arr[2] += 3;
+        
+        alert(arr);
+    });
+    document.getElementById('buttonContainer119').appendChild(button119);
+
+    const button120 = document.createElement('button');
+    button120.innerText = '73_1';
+    button120.addEventListener('click', function() {
+        let arr = [1, 2, 3];
+
+        arr[0]++;
+        arr[1]++;
+        arr[2]++;
+        
+        alert(arr);
+    });
+    document.getElementById('buttonContainer120').appendChild(button120);
+
+    const button121 = document.createElement('button');
+    button121.innerText = '74_1';
+    button121.addEventListener('click', function() {
+        let arr = [];
+
+        arr[0] = '1';
+        arr[1] = '2';
+        arr[2] = '3';
+        
+        alert(arr);
+    });
+    document.getElementById('buttonContainer121').appendChild(button121);
+
+    const button122 = document.createElement('button');
+    button122.innerText = '74_2';
+    button122.addEventListener('click', function() {
+        let arr = [1, 2, 3];
+
+        arr[3] = 4;
+        arr[4] = 5;
+
+        alert(arr);
+    });
+    document.getElementById('buttonContainer122').appendChild(button122);
+
+    const button123 = document.createElement('button');
+    button123.innerText = '75_1';
+    button123.addEventListener('click', function() {
+        let arr = [];
+
+        arr[3] = 'a';
+        arr[8] = 'b';
+
+        alert(arr.length);
+    });
+    document.getElementById('buttonContainer123').appendChild(button123);
+
+    const button124 = document.createElement('button');
+    button124.innerText = '76_1';
+    button124.addEventListener('click', function() {
+        let arr = [];
+
+        arr.push('1');
+        arr.push('2');
+        arr.push('3');
+
+        alert(arr);
+    });
+    document.getElementById('buttonContainer124').appendChild(button124);
+
+    const button125 = document.createElement('button');
+    button125.innerText = '76_2';
+    button125.addEventListener('click', function() {
+        let arr = [1, 2, 3];
+
+        arr.push('4');
+        arr.push('5');
+
+        alert(arr);
+    });
+    document.getElementById('buttonContainer125').appendChild(button125);
+
+    const button126 = document.createElement('button');
+    button126.innerText = '77_1';
+    button126.addEventListener('click', function() {
+        let arr = ['a', 'b', 'c'];
+
+        let key = 2;
+
+        alert(arr[key]);
+    });
+    document.getElementById('buttonContainer126').appendChild(button126);
+
+    const button127 = document.createElement('button');
+    button127.innerText = '77_2';
+    button127.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+
+        let key1 = 1;
+        let key2 = 2;
+
+        alert(arr[key1] + arr[key2]);
+    });
+    document.getElementById('buttonContainer127').appendChild(button127);
+
+    const button128 = document.createElement('button');
+    button128.innerText = '78_1';
+    button128.addEventListener('click', function() {
+        let arr = ['a', 'b', 'c', 'd', 'e'];
+
+        delete arr[1], arr[2];
+
+        alert(arr);
+        alert(arr.length);
+    });
+    document.getElementById('buttonContainer128').appendChild(button128);
+
+    const button129 = document.createElement('button');
+    button129.innerText = '79_1';
+    button129.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr[arr.length -1]);
+    });
+    document.getElementById('buttonContainer129').appendChild(button129);
+
+    const button130 = document.createElement('button');
+    button130.innerText = '79_2';
+    button130.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr[0] + arr[1] + arr[2] + arr[3] + arr[4]);
+    });
+    document.getElementById('buttonContainer130').appendChild(button130);
+
+    const button131 = document.createElement('button');
+    button131.innerText = '79_3';
+    button131.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr.length);
+    });
+    document.getElementById('buttonContainer131').appendChild(button131);
+
+    const button132 = document.createElement('button');
+    button132.innerText = '79_4';
+    button132.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr.length);
+    });
+    document.getElementById('buttonContainer132').appendChild(button132);
+
+    const button133 = document.createElement('button');
+    button133.innerText = '80_1';
+    button133.addEventListener('click', function() {
+        let obj = {1: 'mon', 2: 'tue', 3: 'wed', 4: 'thu', 5: 'fri', 6: "sat", 7: 'sun'};
+
+        alert(obj[1] + ' ' + obj[2] + ' ' + obj[3] + ' ' + obj[4] + ' ' + obj[5] + ' ' + obj[6] + ' ' + obj[7]);
+    });
+    document.getElementById('buttonContainer133').appendChild(button133);
+
+    const button134 = document.createElement('button');
+    button134.innerText = '81_1';
+    button134.addEventListener('click', function() {
+        let obj = {1: 'Junuary', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'};
+        console.log(obj);
+    });
+    document.getElementById('buttonContainer134').appendChild(button134);
+
+    const button135 = document.createElement('button');
+    button135.innerText = '';
+    button135.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer135').appendChild(button135);
+
+    const button136 = document.createElement('button');
+    button136.innerText = '';
+    button136.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer136').appendChild(button136);
+
+    const button137 = document.createElement('button');
+    button137.innerText = '';
+    button137.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer137').appendChild(button137);
+
+    const button138 = document.createElement('button');
+    button138.innerText = '';
+    button138.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer138').appendChild(button138);
+
+    const button139 = document.createElement('button');
+    button139.innerText = '';
+    button139.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer139').appendChild(button139);
+
+    const button140 = document.createElement('button');
+    button140.innerText = '';
+    button140.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer140').appendChild(button140);
+
+    const button141 = document.createElement('button');
+    button141.innerText = '';
+    button141.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer141').appendChild(button141);
+
+    const button142 = document.createElement('button');
+    button142.innerText = '';
+    button142.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer142').appendChild(button142);
+
+    const button143 = document.createElement('button');
+    button143.innerText = '';
+    button143.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer143').appendChild(button143);
+
+    const button144 = document.createElement('button');
+    button144.innerText = '';
+    button144.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer144').appendChild(button144);
+
+    const button145 = document.createElement('button');
+    button145.innerText = '';
+    button145.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer145').appendChild(button145);
+
+    const button146 = document.createElement('button');
+    button146.innerText = '';
+    button146.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer146').appendChild(button146);
+
+    const button147 = document.createElement('button');
+    button147.innerText = '';
+    button147.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer147').appendChild(button147);
+
+    const button148 = document.createElement('button');
+    button148.innerText = '';
+    button148.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer148').appendChild(button148);
+
+    const button149 = document.createElement('button');
+    button149.innerText = '';
+    button149.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer149').appendChild(button149);
+
+    const button150 = document.createElement('button');
+    button150.innerText = '';
+    button150.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer150').appendChild(button150);
+
+    const button151 = document.createElement('button');
+    button151.innerText = '';
+    button151.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer151').appendChild(button151);
+
+    const button152 = document.createElement('button');
+    button152.innerText = '';
+    button152.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer152').appendChild(button152);
+
+    const button153 = document.createElement('button');
+    button153.innerText = '';
+    button153.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer153').appendChild(button153);
+
+    const button154 = document.createElement('button');
+    button154.innerText = '';
+    button154.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer154').appendChild(button154);
+
+    const button155 = document.createElement('button');
+    button155.innerText = '';
+    button155.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer155').appendChild(button155);
+
+    const button156 = document.createElement('button');
+    button156.innerText = '';
+    button156.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer156').appendChild(button156);
+
+    const button157 = document.createElement('button');
+    button157.innerText = '';
+    button157.addEventListener('click', function() {
+
+    });
+    document.getElementById('buttonContainer157').appendChild(button157);
