@@ -6869,6 +6869,6 @@
             return true;
         }
     
-        console.log(isPrime(13)); // Результат: true
+        console.log(isPrime(13)); // Рeзультат: true
     });
     document.getElementById('buttonContainer540').appendChild(button540);    
