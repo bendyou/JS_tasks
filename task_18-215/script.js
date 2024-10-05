@@ -7379,3 +7379,42 @@
     });
     document.getElementById('buttonContainer576').appendChild(button576);
     
+    const button577 = document.createElement('button'); 
+    button577.innerText = '225_1'; 
+    button577.addEventListener('click', function() {
+        // Функция возвращает число 3
+        function func1() {
+            return 3; // Возвращает 3
+        }
+
+        console.log(func1);
+    });
+    document.getElementById('buttonContainer577').appendChild(button577);
+    
+    const button578 = document.createElement('button'); 
+    button578.innerText = '225_2'; 
+    button578.addEventListener('click', function() {
+        // Сохраняем код функции func1 в переменную func2
+        function func1() {
+            return 3;
+        }
+    
+        const func2 = func1; // Копируем ссылку на функцию
+
+        console.log(func2);
+    });
+    document.getElementById('buttonContainer578').appendChild(button578);
+    
+    const button579 = document.createElement('button'); 
+    button579.innerText = '225_3'; 
+    button579.addEventListener('click', function() {
+        // Выводим сумму результатов работы функций func1 и func2
+        function func1() {
+            return 3;
+        }
+    
+        const func2 = func1; // Копируем ссылку на функцию
+        console.log(func1() + func2()); // Выведет 6 (3 + 3)
+    });
+    document.getElementById('buttonContainer579').appendChild(button579);
+    
