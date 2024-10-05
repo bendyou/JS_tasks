@@ -6872,3 +6872,510 @@
         console.log(isPrime(13)); // Рeзультат: true
     });
     document.getElementById('buttonContainer540').appendChild(button540);    
+
+    const button541 = document.createElement('button'); 
+    button541.innerText = '216_1'; 
+    button541.addEventListener('click', function() {
+        // выводит в консоль значение переменной num, которая равна 1
+        let num = 1;
+        
+        function func() {
+            console.log(num); // Выведет 1
+        }
+    
+        func();
+    });
+    document.getElementById('buttonContainer541').appendChild(button541);
+    
+    const button542 = document.createElement('button');
+    button542.innerText = '216_2';
+    button542.addEventListener('click', function() {
+        // выводит в консоль значение переменной num. Сначала num равен 1, затем присваивается значение 2
+        let num = 1;
+        
+        function func() {
+            console.log(num); // Выведет 2, так как num изменен перед вызовом функции
+        }
+    
+        num = 2;
+        func();
+    });
+    document.getElementById('buttonContainer542').appendChild(button542);
+    
+    const button543 = document.createElement('button');
+    button543.innerText = '216_3';
+    button543.addEventListener('click', function() {
+        // объявляется функция func, которая выводит в консоль значение переменной num.
+        // Переменная num сначала объявлена, затем ей присваиваются разные значения перед каждым вызовом функции
+        function func() {
+            console.log(num); // Выведет 1 при первом вызове и 2 при втором
+        }
+    
+        let num;
+    
+        num = 1;
+        func(); // Выведет 1
+    
+        num = 2;
+        func(); // Выведет 2
+    });
+    document.getElementById('buttonContainer543').appendChild(button543);
+    
+    const button544 = document.createElement('button'); 
+    button544.innerText = '217_1'; 
+    button544.addEventListener('click', function() {
+        // Попытка вывести переменную num, которая не определена вне функции, вызовет ошибку ReferenceError
+        function func() {
+            let num = 5;
+            return num;
+        }
+    
+        console.log(num); // Ошибка: num не определен в глобальной области видимости
+    });
+    document.getElementById('buttonContainer544').appendChild(button544);
+    
+    const button545 = document.createElement('button');
+    button545.innerText = '217_2';
+    button545.addEventListener('click', function() {
+        // Выводится результат выполнения функции, которая возвращает 5
+        function func() {
+            let num = 5;
+            return num;
+        }
+    
+        console.log(func()); // Выведет 5, так как функция возвращает 5
+    });
+    document.getElementById('buttonContainer545').appendChild(button545);
+    
+    const button546 = document.createElement('button'); 
+    button546.innerText = '218_1'; 
+    button546.addEventListener('click', function() {
+        // В глобальной области переменной num присвоено значение 1. 
+        // Функция func изменяет глобальную переменную num на 2.
+        let num = 1;
+    
+        function func() {
+            num = 2; // Изменяет глобальную переменную num
+        }
+        func();
+    
+        console.log(num); // Выведет 2
+    });
+    document.getElementById('buttonContainer546').appendChild(button546);
+    
+    const button547 = document.createElement('button');
+    button547.innerText = '218_2';
+    button547.addEventListener('click', function() {
+        // В глобальной области переменной num присвоено значение 1. 
+        // Внутри функции создается локальная переменная num, которая не влияет на глобальную.
+        let num = 1;
+    
+        function func() {
+            let num = 2; // Локальная переменная num, не влияет на глобальную
+        }
+        func();
+    
+        console.log(num); // Выведет 1, так как глобальная переменная не изменилась
+    });
+    document.getElementById('buttonContainer547').appendChild(button547);
+    
+    const button548 = document.createElement('button'); 
+    button548.innerText = '219_1'; 
+    button548.addEventListener('click', function() {
+        // Глобальная переменная num изменяется внутри функции func на 2
+        let num = 1;
+    
+        function func() {
+            num = 2;
+        }
+        func();
+    
+        console.log(num); // Выведет 2
+    });
+    document.getElementById('buttonContainer548').appendChild(button548);
+    
+    const button549 = document.createElement('button');
+    button549.innerText = '219_2';
+    button549.addEventListener('click', function() {
+        // Глобальная переменная num равна 1, так как func не вызывается до вывода в консоль
+        let num = 1;
+    
+        function func() {
+            num = 2;
+        }
+    
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer549').appendChild(button549);
+    
+    const button550 = document.createElement('button');
+    button550.innerText = '219_3';
+    button550.addEventListener('click', function() {
+        // Локальная переменная num внутри функции не влияет на глобальную переменную num
+        let num = 1;
+    
+        function func() {
+            let num = 2;
+        }
+        func();
+    
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer550').appendChild(button550);
+    
+    const button551 = document.createElement('button');
+    button551.innerText = '219_4';
+    button551.addEventListener('click', function() {
+        // Глобальная переменная num равна 1, функция func определяет локальную переменную num
+        let num = 1;
+    
+        function func() {
+            let num = 2;
+        }
+    
+        console.log(num); // Выведет 1
+        func();
+    });
+    document.getElementById('buttonContainer551').appendChild(button551);
+    
+    const button552 = document.createElement('button');
+    button552.innerText = '219_5';
+    button552.addEventListener('click', function() {
+        // Сначала выводится значение 1, затем функция изменяет глобальную переменную на 2
+        let num = 1;
+    
+        function func() {
+            num = 2;
+        }
+    
+        console.log(num); // Выведет 1
+        func();
+    });
+    document.getElementById('buttonContainer552').appendChild(button552);
+    
+    const button553 = document.createElement('button');
+    button553.innerText = '219_6';
+    button553.addEventListener('click', function() {
+        // Глобальная переменная num увеличивается на 1 три раза
+        let num = 1;
+    
+        function func() {
+            num++;
+        }
+    
+        func();
+        func();
+        func();
+        console.log(num); // Выведет 4
+    });
+    document.getElementById('buttonContainer553').appendChild(button553);
+    
+    const button554 = document.createElement('button');
+    button554.innerText = '219_7';
+    button554.addEventListener('click', function() {
+        // Глобальная переменная num равна 1, функция изменит её на 2 после вывода
+        function func() {
+            num = 2;
+        }
+    
+        let num = 1;
+        console.log(num); // Выведет 1
+        func();
+    });
+    document.getElementById('buttonContainer554').appendChild(button554);
+    
+    const button555 = document.createElement('button');
+    button555.innerText = '219_8';
+    button555.addEventListener('click', function() {
+        // Функция изменяет глобальную переменную num на 2 до вывода
+        function func() {
+            num = 2;
+        }
+    
+        let num = 1;
+        func();
+        console.log(num); // Выведет 1, так как функция не изменяет локальную переменную
+    });
+    document.getElementById('buttonContainer555').appendChild(button555);
+
+    const button556 = document.createElement('button'); 
+    button556.innerText = '220_1'; 
+    button556.addEventListener('click', function() {
+        // Выводится переданное в функцию значение 1
+        function func(localNum) {
+            console.log(localNum); // Выведет 1
+        }
+    
+        func(1);
+    });
+    document.getElementById('buttonContainer556').appendChild(button556);
+    
+    const button557 = document.createElement('button');
+    button557.innerText = '220_2';
+    button557.addEventListener('click', function() {
+        // Передается переменная num со значением 1, и это значение выводится
+        function func(localNum) {
+            console.log(localNum); // Выведет 1
+        }
+    
+        let num = 1;
+        func(num);
+    });
+    document.getElementById('buttonContainer557').appendChild(button557);
+    
+    const button558 = document.createElement('button');
+    button558.innerText = '220_3';
+    button558.addEventListener('click', function() {
+        // Сначала выводится значение 1, так как в момент вызова func(num) переменная num равна 1
+        function func(localNum) {
+            console.log(localNum); // Выведет 1
+        }
+    
+        let num = 1;
+        func(num);
+        num = 2;
+    });
+    document.getElementById('buttonContainer558').appendChild(button558);
+    
+    const button559 = document.createElement('button');
+    button559.innerText = '220_4';
+    button559.addEventListener('click', function() {
+        // Переменная num изменяется на 2 перед вызовом функции, и выводится 2
+        let num = 1;
+    
+        function func(localNum) {
+            console.log(localNum); // Выведет 2
+        }
+    
+        num = 2;
+        func(num);
+    });
+    document.getElementById('buttonContainer559').appendChild(button559);
+    
+    const button560 = document.createElement('button');
+    button560.innerText = '220_5';
+    button560.addEventListener('click', function() {
+        // Внутри функции изменяется только локальная переменная localNum, глобальная переменная num остается 1
+        function func(localNum) {
+            localNum = 2;
+        }
+    
+        let num = 1;
+        func(num);
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer560').appendChild(button560);
+    
+    const button561 = document.createElement('button');
+    button561.innerText = '220_6';
+    button561.addEventListener('click', function() {
+        // Функция изменяет глобальную переменную num на 2
+        function func(localNum) {
+            num = 2;
+        }
+    
+        let num = 1;
+        func(num);
+        console.log(num); // Выведет 2
+    });
+    document.getElementById('buttonContainer561').appendChild(button561);
+    
+    const button562 = document.createElement('button');
+    button562.innerText = '220_7';
+    button562.addEventListener('click', function() {
+        // Локальная переменная num внутри функции не влияет на глобальную переменную num
+        function func(localNum) {
+            let num = 2;
+        }
+    
+        let num = 1;
+        func(num);
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer562').appendChild(button562);
+
+    const button563 = document.createElement('button'); 
+    button563.innerText = '221_1'; 
+    button563.addEventListener('click', function() {
+        // Переменная num передается в функцию по значению, и изменение внутри функции не влияет на глобальную переменную num
+        function func(num) {
+            num = 2;
+        }
+    
+        let num = 1;
+        func(num);
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer563').appendChild(button563);
+    
+    const button564 = document.createElement('button');
+    button564.innerText = '221_2';
+    button564.addEventListener('click', function() {
+        // Функция func изменяет глобальную переменную num на 2
+        function func() {
+            num = 2;
+        }
+    
+        let num = 1;
+        func();
+        console.log(num); // Выведет 2
+    });
+    document.getElementById('buttonContainer564').appendChild(button564);
+    
+    const button565 = document.createElement('button');
+    button565.innerText = '221_3';
+    button565.addEventListener('click', function() {
+        // Локальная переменная num внутри функции не влияет на глобальную переменную num
+        function func() {
+            let num = 2;
+        }
+    
+        let num = 1;
+        func();
+        console.log(num); // Выведет 1
+    });
+    document.getElementById('buttonContainer565').appendChild(button565);
+
+    const button566 = document.createElement('button'); 
+    button566.innerText = '222_1'; 
+    button566.addEventListener('click', function() {
+        // Функция изменяет свойство объекта obj, переданного по ссылке
+        function func(obj) {
+            obj.a = '!'; // Изменение свойства объекта
+        }
+    
+        let obj = {a: 1, b: 2, c: 3};
+        func(obj);
+        console.log(obj); // Выведет {a: '!', b: 2, c: 3}
+    });
+    document.getElementById('buttonContainer566').appendChild(button566);
+    
+    const button567 = document.createElement('button');
+    button567.innerText = '222_2';
+    button567.addEventListener('click', function() {
+        // Передается значение свойства obj.a, функция изменяет только локальную переменную arg
+        function func(arg) {
+            arg = '!'; // Изменение локальной переменной не влияет на объект
+        }
+    
+        let obj = {a: 1, b: 2, c: 3};
+        func(obj.a);
+        console.log(obj); // Выведет {a: 1, b: 2, c: 3}
+    });
+    document.getElementById('buttonContainer567').appendChild(button567);
+    
+    const button568 = document.createElement('button');
+    button568.innerText = '222_3';
+    button568.addEventListener('click', function() {
+        // Передается значение свойства obj.a, функция изменяет только локальную переменную obj
+        function func(obj) {
+            obj = '!'; // Изменение локальной переменной не влияет на объект
+        }
+    
+        let obj = {a: 1, b: 2, c: 3};
+        func(obj.a);
+        console.log(obj); // Выведет {a: 1, b: 2, c: 3}
+    });
+    document.getElementById('buttonContainer568').appendChild(button568);
+    
+    const button569 = document.createElement('button');
+    button569.innerText = '222_4';
+    button569.addEventListener('click', function() {
+        // Функция изменяет массив, удаляя элемент с индексом 1
+        function func(arr) {
+            arr.splice(1, 1); // Удаляет элемент с индексом 1
+        }
+    
+        let arr = [1, 2, 3];
+        func(arr);
+        console.log(arr); // Выведет [1, 3]
+    });
+    document.getElementById('buttonContainer569').appendChild(button569);
+    
+    const button570 = document.createElement('button');
+    button570.innerText = '222_5';
+    button570.addEventListener('click', function() {
+        // Метод slice не изменяет исходный массив, а возвращает новый массив
+        function func(arr) {
+            arr.slice(1, 1); // Не изменяет arr
+        }
+    
+        let arr = [1, 2, 3];
+        func(arr);
+        console.log(arr); // Выведет [1, 2, 3]
+    });
+    document.getElementById('buttonContainer570').appendChild(button570);
+    
+    const button571 = document.createElement('button');
+    button571.innerText = '222_6';
+    button571.addEventListener('click', function() {
+        // Внутри функции создается ссылка на тот же массив, и первый элемент изменяется
+        function func(arr) {
+            let newArr = arr; // newArr ссылается на тот же массив
+            newArr[0] = '!'; // Изменяет первый элемент массива
+        }
+    
+        let arr = [1, 2, 3];
+        func(arr);
+        console.log(arr); // Выведет ['!', 2, 3]
+    });
+    document.getElementById('buttonContainer571').appendChild(button571);
+    
+    const button572 = document.createElement('button'); 
+    button572.innerText = '223_1'; 
+    button572.addEventListener('click', function() {
+        function func() {
+            return '!';
+        }
+    
+        console.log(func);
+    });
+    document.getElementById('buttonContainer572').appendChild(button572);
+    
+    const button573 = document.createElement('button'); 
+    button573.innerText = '224_1'; 
+    button573.addEventListener('click', function() {
+        // Функция возвращает строку
+        function func() {
+            return 'Hello, World!'; // Возвращает строку
+        }
+    });
+    document.getElementById('buttonContainer573').appendChild(button573);
+    
+    const button574 = document.createElement('button'); 
+    button574.innerText = '224_2'; 
+    button574.addEventListener('click', function() {
+        // Выводится результат работы функции
+        function func() {
+            return 'Hello, World!';
+        }
+    
+        console.log(func()); // Выведет 'Hello, World!'
+    });
+    document.getElementById('buttonContainer574').appendChild(button574);
+    
+    const button575 = document.createElement('button'); 
+    button575.innerText = '224_3'; 
+    button575.addEventListener('click', function() {
+        // Выводится исходный код функции
+        function func() {
+            return 'Hello, World!';
+        }
+    
+        console.log(func); // Выведет код функции: function func() { return 'Hello, World!'; }
+    });
+    document.getElementById('buttonContainer575').appendChild(button575);
+    
+    const button576 = document.createElement('button'); 
+    button576.innerText = '224_4'; 
+    button576.addEventListener('click', function() {
+        // Переменной func присваивается число 123, затмевая функцию
+        function func() {
+            return 'Hello, World!';
+        }
+    
+        func = 123; // Затираем функцию
+        console.log(func); // Выведет 123
+    });
+    document.getElementById('buttonContainer576').appendChild(button576);
+    
