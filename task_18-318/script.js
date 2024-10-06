@@ -8201,4 +8201,1371 @@
         console.log(sum); // Вывод: 3
     });
     document.getElementById('buttonContainer646').appendChild(button646);
+
+    const button647 = document.createElement('button'); 
+    button647.innerText = '251_1'; 
+    button647.addEventListener('click', function() {
+        function func() {
+            return function() {
+                return function() {
+                    return function() {
+                        return function() {
+                            return '!';
+                        };
+                    };
+                };
+            };
+        }
+        console.log(func()()()()());
+    });
+    document.getElementById('buttonContainer647').appendChild(button647);
+    
+    const button648 = document.createElement('button'); 
+    button648.innerText = '252_1'; 
+    button648.addEventListener('click', function() {
+        function func(a) {
+            return function(b) {
+                return function(c) {
+                    return a + b + c;
+                };
+            };
+        }
+        console.log(func(2)(3)(4)); // Вывод: 9
+    });
+    document.getElementById('buttonContainer648').appendChild(button648);
+    
+    const button649 = document.createElement('button'); 
+    button649.innerText = '252_2'; 
+    button649.addEventListener('click', function() {
+        function func(a) {
+            return function(b) {
+                return function(c) {
+                    return function(d) {
+                        return function() {
+                            return [a, b, c, d];
+                        };
+                    };
+                };
+            };
+        }
+        console.log(func(2)(3)(4)(5)()); // Вывод: [2, 3, 4, 5]
+    });
+    document.getElementById('buttonContainer649').appendChild(button649);
+    
+    const button650 = document.createElement('button'); 
+    button650.innerText = '253_1'; 
+    button650.addEventListener('click', function() {
+        function each(arr, func) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = func(arr[i]);
+            }
+            return arr;
+        }
+        
+        const numbers = [1, 2, 3, 4];
+        const doubled = each(numbers, function(num) {
+            return num * 2;
+        });
+        console.log(doubled);
+    });
+    document.getElementById('buttonContainer650').appendChild(button650);
+    
+    const button651 = document.createElement('button'); 
+    button651.innerText = '253_2'; 
+    button651.addEventListener('click', function() {
+        function each(arr, func) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = func(arr[i]);
+            }
+            return arr;
+        }
+        
+        const strings = ['abc', 'def', 'ghi'];
+        const reversed = each(strings, function(str) {
+            return str.split('').reverse().join('');
+        });
+        console.log(reversed);
+    });
+    document.getElementById('buttonContainer651').appendChild(button651);
+    
+    const button652 = document.createElement('button'); 
+    button652.innerText = '253_3'; 
+    button652.addEventListener('click', function() {
+        function each(arr, func) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = func(arr[i]);
+            }
+            return arr;
+        }
+        
+        const strings = ['apple', 'banana', 'cherry'];
+        const capitalized = each(strings, function(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        });
+        console.log(capitalized);
+    });
+    document.getElementById('buttonContainer652').appendChild(button652);
+    
+    const button653 = document.createElement('button'); 
+    button653.innerText = '254_1'; 
+    button653.addEventListener('click', function() {
+        function cube(num) {
+            return num ** 3;
+        }
+        
+        function each(arr, func) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = func(arr[i]);
+            }
+            return arr;
+        }
+        
+        const result = each([1, 2, 3, 4, 5], cube);
+        console.log(result);
+    });
+    document.getElementById('buttonContainer653').appendChild(button653);
+    
+    const button654 = document.createElement('button'); 
+    button654.innerText = '256_1'; 
+    button654.addEventListener('click', function() {
+        function filter(arr, callback) {
+            let res = [];
+            for (let elem of arr) {
+                if (callback(elem) === true) {
+                    res.push(elem);
+                }
+            }
+            return res;
+        }
+    
+        let result = filter([1, 2, 3, 4, 5], elem => elem > 0);
+        console.log(result);
+    });
+    document.getElementById('buttonContainer654').appendChild(button654);
+    
+    const button655 = document.createElement('button'); 
+    button655.innerText = '259_1'; 
+    button655.addEventListener('click', function() {
+        function test() {
+            let num1 = 1;
+            let num2 = 2;
+            return function() {
+                return num1 + num2;
+            };
+        }
+        let func = test();
+        console.log(func()); // Вывод: 3
+    });
+    document.getElementById('buttonContainer655').appendChild(button655);
+    
+    const button656 = document.createElement('button'); 
+    button656.innerText = '259_2'; 
+    button656.addEventListener('click', function() {
+        function test() {
+            let num1 = 1;
+            let num2 = 2;
+            return function() {
+                return num1 + num2;
+            };
+        }
+        console.log(test()()); // Вывод: 3
+    });
+    document.getElementById('buttonContainer656').appendChild(button656);
+    
+    const button657 = document.createElement('button'); 
+    button657.innerText = '259_3'; 
+    button657.addEventListener('click', function() {
+        function test() {
+            let num1 = 1;
+            return function() {
+                return num1 + num2;
+            };
+        }
+        let num2 = 2;
+        let func = test();
+        console.log(func()); // Вывод: 3
+    });
+    document.getElementById('buttonContainer657').appendChild(button657);
+    
+    const button658 = document.createElement('button'); 
+    button658.innerText = '259_4'; 
+    button658.addEventListener('click', function() {
+        function test() {
+            let num = 1;
+            return function() {
+                return num;
+            };
+        }
+        let num = 2;
+        let func = test();
+        console.log(func()); // Вывод: 1
+    });
+    document.getElementById('buttonContainer658').appendChild(button658);
+
+    const button659 = document.createElement('button');
+    button659.innerText = '261_1';
+    button659.addEventListener('click', function() {
+        function test() {
+            let num = 1;
+            return function() {
+                console.log(num);
+                num++;
+            }
+        }
+        let func = test();
+        func(); // вызов 1
+        func(); // вызов 2
+    });
+    document.getElementById('buttonContainer659').appendChild(button659);
+    
+    const button660 = document.createElement('button');
+    button660.innerText = '261_2';
+    button660.addEventListener('click', function() {
+        function test() {
+            let num = 10;
+            return function() {
+                console.log(num);
+                num--;
+            }
+        }
+        let func = test();
+        func(); // вызов 1
+        func(); // вызов 2
+    });
+    document.getElementById('buttonContainer660').appendChild(button660);
+    
+    const button661 = document.createElement('button');
+    button661.innerText = '261_3';
+    button661.addEventListener('click', function() {
+        function test() {
+            let num = 10;
+            return function() {
+                if (num >= 0) {
+                    console.log(num);
+                    num--;
+                } else {
+                    console.log('Отсчет окончен');
+                }
+            }
+        }
+        let func = test();
+        func(); // вызов 1
+        func(); // вызов 2
+    });
+    document.getElementById('buttonContainer661').appendChild(button661);
+    
+    const button662 = document.createElement('button');
+    button662.innerText = '262_1';
+    button662.addEventListener('click', function() {
+        function func() {
+            let num = 0;
+            return function() {
+                console.log(num);
+                num++;
+            };
+        }
+        func()(); // вывод: 0
+        func()(); // вывод: 0
+        func()(); // вывод: 0
+    });
+    document.getElementById('buttonContainer662').appendChild(button662);
+    
+    const button663 = document.createElement('button');
+    button663.innerText = '262_2';
+    button663.addEventListener('click', function() {
+        function func() {
+            let num = 0;
+            return function() {
+                console.log(num);
+                num++;
+            };
+        }
+        let test = func;
+        test()(); // вывод: 0
+        test()(); // вывод: 0
+    });
+    document.getElementById('buttonContainer663').appendChild(button663);
+
+    const button664 = document.createElement('button');
+    button664.innerText = '263_1';
+    button664.addEventListener('click', function() {
+        let counter = 0;
+    
+        function test() {
+            return function() {
+                console.log(counter);
+                counter++;
+            };
+        }
+    
+        let func = test;
+    
+        let func1 = func();
+        let func2 = func();
+        func1(); // вывод: 0
+        func2(); // вывод: 0
+        func1(); // вывод: 1
+        func2(); // вывод: 1
+    });
+    document.getElementById('buttonContainer664').appendChild(button664);
+    
+    const button665 = document.createElement('button');
+    button665.innerText = '263_2';
+    button665.addEventListener('click', function() {
+        function test() {
+            let counter = 0;
+    
+            return function() {
+                return function() {
+                    console.log(counter);
+                    counter++;
+                };
+            };
+        }
+    
+        let func = test()();
+    
+        let func1 = func;
+        let func2 = func;
+        func1(); // вывод: 0
+        func2(); // вывод: 1
+        func1(); // вывод: 1
+        func2(); // вывод: 2
+    });
+    document.getElementById('buttonContainer665').appendChild(button665);
+    
+    const button666 = document.createElement('button');
+    button666.innerText = '263_3';
+    button666.addEventListener('click', function() {
+        function test() {
+            let counter = 0;
+    
+            return function() {
+                return function() {
+                    console.log(counter);
+                    counter++;
+                };
+            };
+        }
+    
+        let func = test();
+    
+        let func1 = func();
+        let func2 = func();
+        func1(); // вывод: 0
+        func2(); // вывод: 0
+        func1(); // вывод: 1
+        func2(); // вывод: 1
+    });
+    document.getElementById('buttonContainer666').appendChild(button666);
+
+    const button667 = document.createElement('button');
+    button667.innerText = '264_1';
+    button667.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // !
+        !function() {
+            console.log('!');
+        }();
+    });
+    document.getElementById('buttonContainer667').appendChild(button667);
+    
+    const button668 = document.createElement('button');
+    button668.innerText = '264_2';
+    button668.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // Ошибка (Uncaught SyntaxError: Function statements require a function name)
+        // function() {
+        //     console.log('!');
+        // }();
+    });
+    document.getElementById('buttonContainer668').appendChild(button668);
+    
+    const button669 = document.createElement('button');
+    button669.innerText = '265_1';
+    button669.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // !
+        let result = function() {
+            return '!';
+        }();
+        console.log(result);
+    });
+    document.getElementById('buttonContainer669').appendChild(button669);
+    
+    const button670 = document.createElement('button');
+    button670.innerText = '265_2';
+    button670.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // function() { return '!'; }
+        let result = function() {
+            return '!';
+        };
+        console.log(result);
+    });
+    document.getElementById('buttonContainer670').appendChild(button670);
+    
+    const button671 = document.createElement('button');
+    button671.innerText = '265_3';
+    button671.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // !
+        let result = function() {
+            return '!';
+        };
+        console.log(result());
+    });
+    document.getElementById('buttonContainer671').appendChild(button671);
+    
+    const button672 = document.createElement('button');
+    button672.innerText = '266_1';
+    button672.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // 3
+        let result = function() { return 1; }() + function() { return 2; }();
+        console.log(result);
+    });
+    document.getElementById('buttonContainer672').appendChild(button672);
+    
+    const button673 = document.createElement('button');
+    button673.innerText = '267_1';
+    button673.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // !
+        let result = (function() {
+            return '!';
+        }());
+        console.log(result);
+    });
+    document.getElementById('buttonContainer673').appendChild(button673);
+    
+    const button674 = document.createElement('button');
+    button674.innerText = '267_2';
+    button674.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // !
+        let result = (function() {
+            return '!';
+        })();
+        console.log(result);
+    });
+    document.getElementById('buttonContainer674').appendChild(button674);
+    
+    const button675 = document.createElement('button');
+    button675.innerText = '267_3';
+    button675.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // function() { return '!'; }
+        let result = (function() {
+            return '!';
+        });
+        console.log(result);
+    });
+    document.getElementById('buttonContainer675').appendChild(button675);
+    
+    const button676 = document.createElement('button');
+    button676.innerText = '267_4';
+    button676.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // function() { return '!'; }
+        let result = (function() {
+            return '!';
+        });
+        console.log(result());
+    });
+    document.getElementById('buttonContainer676').appendChild(button676);
+
+    const button677 = document.createElement('button');
+    button677.innerText = '268_1';
+    button677.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // 3
+        (function(num1, num2) {
+            console.log(num1 + num2);
+        })(1, 2);
+    });
+    document.getElementById('buttonContainer677').appendChild(button677);
+    
+    const button678 = document.createElement('button');
+    button678.innerText = '269_1';
+    button678.addEventListener('click', function() {
+        (function() {
+            return function() {
+                return function() {
+                    alert('!');
+                };
+            };
+        })()()();
+    });
+    document.getElementById('buttonContainer678').appendChild(button678);
+    
+    const button679 = document.createElement('button');
+    button679.innerText = '269_2';
+    button679.addEventListener('click', function() {
+        (function(num1) {
+            return function(num2) {
+                console.log(num1 + num2);
+            };
+        })(1)(2);
+    });
+    document.getElementById('buttonContainer679').appendChild(button679);
+    
+    const button680 = document.createElement('button');
+    button680.innerText = '269_3';
+    button680.addEventListener('click', function() {
+        (function(num1) {
+            return function(num2) {
+                return function(num3) {
+                    console.log(num1 + num2 + num3);
+                };
+            };
+        })(1)(2)(3);
+    });
+    document.getElementById('buttonContainer680').appendChild(button680);
+    
+    const button681 = document.createElement('button');
+    button681.innerText = '271_1';
+    button681.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // 1
+        let str = 'str';
+    
+        (function() {
+            console.log(1);
+        })();
+    });
+    document.getElementById('buttonContainer681').appendChild(button681);
+    
+    const button682 = document.createElement('button');
+    button682.innerText = '271_2';
+    button682.addEventListener('click', function() {
+        // Вывод в консоль: 
+        // 1
+        let str = 'str';
+    
+        (function() {
+            console.log(1);
+        })();
+    });
+    document.getElementById('buttonContainer682').appendChild(button682);
+    
+    const button683 = document.createElement('button');
+    button683.innerText = '272_1';
+    button683.addEventListener('click', function() {
+        let func = (function() {
+            let num = 1;
+    
+            return function() {
+                console.log(num);
+                num++;
+            };
+        })();
+    
+        func(); // выведет 1
+        func(); // выведет 2
+        func(); // выведет 3
+        func(); // выведет 4
+        func(); // выведет 5
+    });
+    document.getElementById('buttonContainer683').appendChild(button683);
+    
+    const button684 = document.createElement('button');
+    button684.innerText = '272_2';
+    button684.addEventListener('click', function() {
+        // Счетчик, сбрасывающийся после 5
+        let func = (function() {
+            let num = 1;
+    
+            return function() {
+                console.log(num);
+                num++;
+                if (num > 5) num = 1; // сброс до 1
+            };
+        })();
+    
+        func(); // выведет 1
+        func(); // выведет 2
+        func(); // выведет 3
+        func(); // выведет 4
+        func(); // выведет 5
+        func(); // выведет 1
+        func(); // выведет 2
+    });
+    document.getElementById('buttonContainer684').appendChild(button684);
+    
+    const button685 = document.createElement('button');
+    button685.innerText = '274_1';
+    button685.addEventListener('click', function() {
+        function printArray(arr, index = 0) {
+            if (index < arr.length) {
+                console.log(arr[index]);
+                printArray(arr, index + 1);
+            }
+        }
+    
+        let arr = [1, 2, 3, 4, 5];
+        printArray(arr);
+    });
+    document.getElementById('buttonContainer685').appendChild(button685);
+    
+    const button686 = document.createElement('button');
+    button686.innerText = '275_1';
+    button686.addEventListener('click', function() {
+        function sumOfSquares(arr, index = 0) {
+            if (index >= arr.length) return 0;
+            return arr[index] ** 2 + sumOfSquares(arr, index + 1);
+        }
+    
+        let arr = [1, 2, 3, 4, 5];
+        const result = sumOfSquares(arr);
+        console.log(result);
+    });
+    document.getElementById('buttonContainer686').appendChild(button686);
+    
+    const button687 = document.createElement('button');
+    button687.innerText = '276_1';
+    button687.addEventListener('click', function() {
+        // Рекурсивная функция для вывода всех примитивных элементов объекта
+        function printPrimitiveElements(obj) {
+            for (let key in obj) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    printPrimitiveElements(obj[key]); // Рекурсивный вызов для вложенных объектов
+                } else {
+                    console.log(obj[key]); // Вывод примитивных значений
+                }
+            }
+        }
+    
+        const obj = {a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
+        printPrimitiveElements(obj); // Выведет: 1, 2, 3, 4, 5, 6, 7, 8, 9
+    });
+    document.getElementById('buttonContainer687').appendChild(button687);
+    
+    const button688 = document.createElement('button');
+    button688.innerText = '276_2';
+    button688.addEventListener('click', function() {
+        function flattenArray(arr) {
+            return arr.reduce((acc, item) => {
+                if (Array.isArray(item)) {
+                    acc.push(...flattenArray(item));
+                } else {
+                    acc.push(item);
+                }
+                return acc;
+            }, []);
+        }
+    
+        const arr = [1, [2, 7, 8], [3, 4, [5, [6, 7]]]];
+        const flattened = flattenArray(arr);
+        console.log(flattened);
+    });
+    document.getElementById('buttonContainer688').appendChild(button688);
+    
+    const button689 = document.createElement('button');
+    button689.innerText = '277_1';
+    button689.addEventListener('click', function() {
+        function sumObjectValues(obj) {
+            let sum = 0;
+            for (let key in obj) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    sum += sumObjectValues(obj[key]);
+                } else {
+                    sum += obj[key];
+                }
+            }
+            return sum;
+        }
+    
+        const obj = {a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
+        const totalSum = sumObjectValues(obj);
+        console.log(totalSum);
+    });
+    document.getElementById('buttonContainer689').appendChild(button689);
+    
+    const button690 = document.createElement('button');
+    button690.innerText = '277_2';
+    button690.addEventListener('click', function() {
+        function concatenateArrayElements(arr) {
+            return arr.reduce((acc, item) => {
+                if (Array.isArray(item)) {
+                    return acc + concatenateArrayElements(item);
+                } else {
+                    return acc + item;
+                }
+            }, '');
+        }
+    
+        const arr = ['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]];
+        const resultString = concatenateArrayElements(arr);
+        console.log(resultString);
+    });
+    document.getElementById('buttonContainer690').appendChild(button690);
+    
+    const button691 = document.createElement('button');
+    button691.innerText = '278_1';
+    button691.addEventListener('click', function() {
+        function squareArrayElements(arr) {
+            return arr.map(item => {
+                if (Array.isArray(item)) {
+                    return squareArrayElements(item);
+                } else {
+                    return item ** 2;
+                }
+            });
+        }
+    
+        const arr = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+        const squaredArray = squareArrayElements(arr);
+        console.log(squaredArray);
+    });
+    document.getElementById('buttonContainer691').appendChild(button691);
+    
+    const button692 = document.createElement('button');
+    button692.innerText = '279_1';
+    button692.addEventListener('click', function() {
+        const numbers = [4, 9, 16, 25, 36];
+        const squareRoots = numbers.map(Math.sqrt);
+        console.log(squareRoots);
+    });
+    document.getElementById('buttonContainer692').appendChild(button692);
+    
+    const button693 = document.createElement('button');
+    button693.innerText = '279_2';
+    button693.addEventListener('click', function() {
+        const strings = ['hello', 'world', 'example'];
+        const modifiedStrings = strings.map(str => str + '!');
+        console.log(modifiedStrings);
+    });
+    document.getElementById('buttonContainer693').appendChild(button693);
+    
+    const button694 = document.createElement('button');
+    button694.innerText = '279_3';
+    button694.addEventListener('click', function() {
+        const strings = ['hello', 'world', 'example'];
+        const reversedStrings = strings.map(str => str.split('').reverse().join(''));
+        console.log(reversedStrings);
+    });
+    document.getElementById('buttonContainer694').appendChild(button694);
+    
+    const button695 = document.createElement('button');
+    button695.innerText = '279_4';
+    button695.addEventListener('click', function() {
+        let arr = ['123', '456', '789'];
+        let transformedArray = arr.map(str => str.split('').map(Number));
+        console.log(transformedArray);
+    });
+    document.getElementById('buttonContainer695').appendChild(button695);
+    
+    const button696 = document.createElement('button');
+    button696.innerText = '279_5';
+    button696.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 4, 5];
+        const multipliedByIndex = numbers.map((num, index) => num * index);
+        console.log(multipliedByIndex);
+    });
+    document.getElementById('buttonContainer696').appendChild(button696);
+    
+    const button697 = document.createElement('button');
+    button697.innerText = '280_1';
+    button697.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 4, 5];
+        let sumOfSquares = 0;
+    
+        numbers.forEach(num => {
+            sumOfSquares += num ** 2;
+        });
+    
+        console.log(sumOfSquares);
+    });
+    document.getElementById('buttonContainer697').appendChild(button697);
+    
+    const button698 = document.createElement('button');
+    button698.innerText = '281_1';
+    button698.addEventListener('click', function() {
+        const numbers = [1, -2, 3, 4, -5, 6];
+        const positiveNumbers = numbers.filter(num => num > 0);
+        console.log(positiveNumbers);
+    });
+    document.getElementById('buttonContainer698').appendChild(button698);
+    
+    const button699 = document.createElement('button');
+    button699.innerText = '281_2';
+    button699.addEventListener('click', function() {
+        const numbers = [1, -2, 3, -4, -5, 6];
+        const negativeNumbers = numbers.filter(num => num < 0);
+        console.log(negativeNumbers);
+    });
+    document.getElementById('buttonContainer699').appendChild(button699);
+    
+    const button700 = document.createElement('button');
+    button700.innerText = '281_3';
+    button700.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 10, 11, 5];
+        const filteredNumbers = numbers.filter(num => num > 0 && num < 10);
+        console.log(filteredNumbers);
+    });
+    document.getElementById('buttonContainer700').appendChild(button700);
+    
+    const button701 = document.createElement('button');
+    button701.innerText = '281_4';
+    button701.addEventListener('click', function() {
+        const strings = ['hello', 'world', 'JavaScript', 'is', 'awesome'];
+        const longStrings = strings.filter(str => str.length > 5);
+        console.log(longStrings);
+    });
+    document.getElementById('buttonContainer701').appendChild(button701);
+    
+    const button702 = document.createElement('button');
+    button702.innerText = '281_5';
+    button702.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const filteredNumbers = numbers.filter((num, index) => num * (index + 1) < 30);
+        console.log(filteredNumbers);
+    });
+    document.getElementById('buttonContainer702').appendChild(button702);
+    
+    const button703 = document.createElement('button');
+    button703.innerText = '281_6';
+    button703.addEventListener('click', function() {
+        const mixedArray = [1, 2, [3, 4], 5, [6, 7]];
+        const flatArray = mixedArray.filter(item => !Array.isArray(item));
+        console.log(flatArray);
+    });
+    document.getElementById('buttonContainer703').appendChild(button703);
+    
+    const button704 = document.createElement('button');
+    button704.innerText = '282_1';
+    button704.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 4, 5];
+        const allPositive = numbers.every(num => num > 0);
+        console.log(allPositive);
+    });
+    document.getElementById('buttonContainer704').appendChild(button704);
+    
+    const button705 = document.createElement('button');
+    button705.innerText = '282_2';
+    button705.addEventListener('click', function() {
+        const numbers = [1, 2, 3, 4, 5];
+        const allLessThan30 = numbers.every((num, index) => num * (index + 1) < 30);
+        console.log(allLessThan30);
+    });
+    document.getElementById('buttonContainer705').appendChild(button705);
+    
+    const button706 = document.createElement('button');
+    button706.innerText = '283_1';
+    button706.addEventListener('click', function() {
+        const numbers = [-1, -2, 0, -4];
+        const hasPositive = numbers.some(num => num > 0);
+        console.log(hasPositive);
+    });
+    document.getElementById('buttonContainer706').appendChild(button706);
+    
+    const button707 = document.createElement('button');
+    button707.innerText = '283_2';
+    button707.addEventListener('click', function() {
+        const numbers = [5, 2, 3, 10];
+        const hasProductGreaterThan30 = numbers.some((num, index) => num * (index + 1) > 30);
+        console.log(hasProductGreaterThan30);
+    });
+    document.getElementById('buttonContainer707').appendChild(button707);
+    
+    const button708 = document.createElement('button');
+    button708.innerText = '286_1';
+    button708.addEventListener('click', function() {
+        let arr = [1, 2, 3, 4, 5];
+        function func(num1, num2, num3, num4, num5) {
+            return num1 + num2 + num3 + num4 + num5; // Функция для суммы
+        }
+        const sum = func(...arr); // Используем оператор spread
+        console.log(sum); // Выведет: 15
+    });
+    document.getElementById('buttonContainer708').appendChild(button708);
+    
+    const button709 = document.createElement('button');
+    button709.innerText = '287_1';
+    button709.addEventListener('click', function() {
+        function func(n1, n2, n3, n4, n5, n6, n7, n8) {
+            return (n1 + n2 + n3 + n4) * (n5 + n6 + n7 + n8);
+        }
+        
+        console.log(func(1, ...[2, 3, 4], 5, ...[6], ...[7, 8]));
+    });
+    document.getElementById('buttonContainer709').appendChild(button709);
+    
+    const button710 = document.createElement('button');
+    button710.innerText = '288_1';
+    button710.addEventListener('click', function() {
+        let arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3];
+        console.log(Math.min(...arr));
+    });
+    document.getElementById('buttonContainer710').appendChild(button710);
+    
+    const button711 = document.createElement('button');
+    button711.innerText = '289_1';
+    button711.addEventListener('click', function() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let arr = ['a', ...arr1, 'b', 'c', ...arr2];
+        console.log(arr); // выведет: ['a', 1, 2, 3, 'b', 'c', 4, 5, 6]
+    });
+    document.getElementById('buttonContainer711').appendChild(button711);
+    
+    const button712 = document.createElement('button');
+    button712.innerText = '289_2';
+    button712.addEventListener('click', function() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let arr = ['a', ...arr1, ...arr1, 'b', 'c'];
+        console.log(arr); // выведет: ['a', 1, 2, 3, 1, 2, 3, 'b', 'c']
+    });
+    document.getElementById('buttonContainer712').appendChild(button712);
+    
+    const button713 = document.createElement('button');
+    button713.innerText = '289_3';
+    button713.addEventListener('click', function() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1, 4, 5, 6];
+        let arr = ['a', 'b', 'c', ...arr2];
+        console.log(arr); // выведет: ['a', 'b', 'c', 1, 2, 3, 4, 5, 6]
+    });
+    document.getElementById('buttonContainer713').appendChild(button713);
+    
+    const button714 = document.createElement('button');
+    button714.innerText = '289_4';
+    button714.addEventListener('click', function() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1, 4, 5, 6];
+        let arr3 = [...arr2, 7, 8, 9];
+        let arr = [0, ...arr3];
+        console.log(arr); // выведет: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    });
+    document.getElementById('buttonContainer714').appendChild(button714);
+    
+    const button715 = document.createElement('button');
+    button715.innerText = '289_5';
+    button715.addEventListener('click', function() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1];
+        console.log(arr2); // выведет: [1, 2, 3]
+    });
+    document.getElementById('buttonContainer715').appendChild(button715);
+    
+    const button716 = document.createElement('button'); 
+    button716.innerText = '290_1'; 
+    button716.addEventListener('click', function() {
+        let arr = [...'12345'];
+        console.log(arr); // вывод: ['1', '2', '3', '4', '5']
+    });
+    document.getElementById('buttonContainer716').appendChild(button716);
+    
+    const button717 = document.createElement('button');
+    button717.innerText = '290_2';
+    button717.addEventListener('click', function() {
+        let arr = ['a', ...'12345'];
+        console.log(arr); // вывод: ['a', '1', '2', '3', '4', '5']
+    });
+    document.getElementById('buttonContainer717').appendChild(button717);
+    
+    const button718 = document.createElement('button');
+    button718.innerText = '290_3';
+    button718.addEventListener('click', function() {
+        let arr = [...'12345', ...'56789'];
+        console.log(arr); // вывод: ['1', '2', '3', '4', '5', '5', '6', '7', '8', '9']
+    });
+    document.getElementById('buttonContainer718').appendChild(button718);
+    
+    const button719 = document.createElement('button');
+    button719.innerText = '290_4';
+    button719.addEventListener('click', function() {
+        let arr1 = ['a', 'b', 'c'];
+        let arr2 = [...arr1, ...'12345'];
+        console.log(arr2); // вывод: ['a', 'b', 'c', '1', '2', '3', '4', '5']
+    });
+    document.getElementById('buttonContainer719').appendChild(button719);
+    
+    const button720 = document.createElement('button'); 
+    button720.innerText = '293_1'; 
+    button720.addEventListener('click', function() {
+        function average(...numbers) {
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            return sum / numbers.length || 0;
+        }
+        console.log(average(1, 2, 3, 4, 5));
+    });
+    document.getElementById('buttonContainer720').appendChild(button720);
+    
+    const button721 = document.createElement('button'); 
+    button721.innerText = '296_1'; 
+    button721.addEventListener('click', function() {
+        let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+        let [name, surname, department, position, salary] = arr;
+    
+        console.log(name);
+        console.log(surname);
+        console.log(department);
+        console.log(position);
+        console.log(salary);
+    });
+    document.getElementById('buttonContainer721').appendChild(button721);
+    
+    const button722 = document.createElement('button'); 
+    button722.innerText = '297_1'; 
+    button722.addEventListener('click', function() {
+        function func() {
+            return ['John', 'Smit', 'development', 'programmer', 2000];
+        }
+    
+        let arr = func();
+        let [name, surname, department, position, salary] = arr;
+    
+        console.log(name);
+        console.log(surname);
+        console.log(department);
+        console.log(position);
+        console.log(salary);
+    });
+    document.getElementById('buttonContainer722').appendChild(button722);
+    
+    const button723 = document.createElement('button'); 
+    button723.innerText = '298_1'; 
+    button723.addEventListener('click', function() {
+        let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+        let [, , department, position] = arr;
+    
+        console.log(department);
+        console.log(position);
+    });
+    document.getElementById('buttonContainer723').appendChild(button723);
+    
+    const button724 = document.createElement('button'); 
+    button724.innerText = '300_1'; 
+    button724.addEventListener('click', function() {
+        let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+        let [name, surname, ...info] = arr;
+    
+        console.log(name);
+        console.log(surname);
+        console.log(info);
+    });
+    document.getElementById('buttonContainer724').appendChild(button724);
+
+    const button725 = document.createElement('button'); 
+    button725.innerText = '301_1'; 
+    button725.addEventListener('click', function() {
+        let arr = ['John', 'Smit', 'development', 'programmer'];
+        let [name, surname, department, position = 'trainee'] = arr;
+    
+        console.log(name);
+        console.log(surname);
+        console.log(department);
+        console.log(position);
+    });
+    document.getElementById('buttonContainer725').appendChild(button725);
+    
+    const button726 = document.createElement('button'); 
+    button726.innerText = '302_1'; 
+    button726.addEventListener('click', function() {
+        function getCurrentYear() {
+            return new Date().getFullYear();
+        }
+    
+        function getCurrentMonth() {
+            return new Date().getMonth() + 1;
+        }
+    
+        let arr = [undefined, undefined];
+        let [year = getCurrentYear(), month = getCurrentMonth()] = arr;
+    
+        console.log(year);
+        console.log(month);
+    });
+    document.getElementById('buttonContainer726').appendChild(button726);
+    
+    const button727 = document.createElement('button'); 
+    button727.innerText = '304_1'; 
+    button727.addEventListener('click', function() {
+        let options = {
+            color: 'red',
+            width:  400,
+            height: 500,
+        };
+    
+        let { color, width, height } = options;
+    
+        console.log(color);
+        console.log(width);
+        console.log(height);
+    });
+    document.getElementById('buttonContainer727').appendChild(button727);
+    
+    const button728 = document.createElement('button'); 
+    button728.innerText = '305_1'; 
+    button728.addEventListener('click', function() {
+        let options = {
+            color: 'red',
+            width:  400,
+            height: 500,
+        };
+    
+        let { color: c, width: w, height: h } = options;
+    
+        console.log(c);
+        console.log(w);
+        console.log(h);
+    });
+    document.getElementById('buttonContainer728').appendChild(button728);
+    
+    const button729 = document.createElement('button'); 
+    button729.innerText = '306_1'; 
+    button729.addEventListener('click', function() {
+        let options = {
+            width:  400,
+            height: 500,
+        };
+    
+        let { color = 'black', width, height } = options;
+    
+        console.log(color);
+        console.log(width);
+        console.log(height);
+    });
+    document.getElementById('buttonContainer729').appendChild(button729);
+    
+    const button730 = document.createElement('button'); 
+    button730.innerText = '307_1'; 
+    button730.addEventListener('click', function() {
+        let options = {
+            width:  400,
+            height: 500,
+        };
+    
+        let { color: с = 'black', width: w, height: h } = options;
+    
+        console.log(с);
+        console.log(w);
+        console.log(h);
+    });
+    document.getElementById('buttonContainer730').appendChild(button730);
+    
+    const button731 = document.createElement('button'); 
+    button731.innerText = '309_1'; 
+    button731.addEventListener('click', function() {
+        function func([name, surname, department, position, salary]) {
+            console.log(name);     
+            console.log(surname);
+            console.log(department);
+            console.log(position);
+            console.log(salary); 
+        }
+    
+        func(['John', 'Smit', 'development', 'programmer', 2000]);
+    });
+    document.getElementById('buttonContainer731').appendChild(button731);
+    
+    const button732 = document.createElement('button'); 
+    button732.innerText = '309_2'; 
+    button732.addEventListener('click', function() {
+        function func([name, surname, ...info]) {
+            console.log(name);
+            console.log(surname);
+            console.log(info);
+        }
+    
+        func(['John', 'Smit', 'development', 'programmer', 2000]);
+    });
+    document.getElementById('buttonContainer732').appendChild(button732);
+    
+    const button733 = document.createElement('button'); 
+    button733.innerText = '309_3'; 
+    button733.addEventListener('click', function() {
+        function func([name, surname, department, position = 'джуниор']) {
+            console.log(name);
+            console.log(surname);
+            console.log(department);
+            console.log(position);
+        }
+    
+        func(['John', 'Smit', 'development']);
+    });
+    document.getElementById('buttonContainer733').appendChild(button733);
+    
+    const button734 = document.createElement('button'); 
+    button734.innerText = '309_4'; 
+    button734.addEventListener('click', function() {
+        function func(department, [name, surname], [year, month, day]) {
+            console.log(department);
+            console.log(name);
+            console.log(surname);
+            console.log(year);
+            console.log(month);
+            console.log(day);
+        }
+    
+        func('development', ['John', 'Smit'], [2018, 12, 31]);
+    });
+    document.getElementById('buttonContainer734').appendChild(button734);
+    
+    const button735 = document.createElement('button'); 
+    button735.innerText = '310_1'; 
+    button735.addEventListener('click', function() {
+        function func({ color, width, height }) {
+            console.log(color);
+            console.log(width);
+            console.log(height);
+        }
+    
+        func({ color: 'red', width: 400, height: 500 });
+    });
+    document.getElementById('buttonContainer735').appendChild(button735);
+    
+    const button736 = document.createElement('button'); 
+    button736.innerText = '310_2'; 
+    button736.addEventListener('click', function() {
+        function func({ width, height, color = 'black' }) {
+            console.log(width);
+            console.log(height);
+            console.log(color);
+        }
+    
+        func({ color: 'red', width: 400, height: 500 });
+    });
+    document.getElementById('buttonContainer736').appendChild(button736);
+    
+    const button737 = document.createElement('button'); 
+    button737.innerText = '311_1'; 
+    button737.addEventListener('click', function() {
+        let date = new Date();
+        console.log(date.getDate()); // текущий день
+    });
+    document.getElementById('buttonContainer737').appendChild(button737);
+    
+    const button738 = document.createElement('button'); 
+    button738.innerText = '311_2'; 
+    button738.addEventListener('click', function() {
+        let date = new Date();
+        console.log(date.getMonth() + 1); // текущий месяц (прибавляем 1, чтобы получить привычный номер месяца)
+    });
+    document.getElementById('buttonContainer738').appendChild(button738);
+    
+    const button739 = document.createElement('button'); 
+    button739.innerText = '311_3'; 
+    button739.addEventListener('click', function() {
+        let date = new Date();
+        console.log(date.getFullYear()); // текущий год
+    });
+    document.getElementById('buttonContainer739').appendChild(button739);
+    
+    const button740 = document.createElement('button'); 
+    button740.innerText = '312_1'; 
+    button740.addEventListener('click', function() {
+        function addZero(num) {
+            if (num >= 0 && num <= 9) {
+                return '0' + num;
+            } else {
+                return num;
+            }
+        }
+    
+        let date = new Date();
+        console.log(
+            addZero(date.getHours()) + ':' + 
+            addZero(date.getMinutes()) + ':' + 
+            addZero(date.getSeconds()) + ' ' +
+            addZero(date.getDate()) + '.' + 
+            addZero(date.getMonth() + 1) + '.' + 
+            date.getFullYear()
+        );
+    });
+    document.getElementById('buttonContainer740').appendChild(button740);
+    
+    const button741 = document.createElement('button'); 
+    button741.innerText = '313_1'; 
+    button741.addEventListener('click', function() {
+        let str = '2025-12-31';
+        let res = str.split('-').reverse().join('.');
+    
+        console.log(res); // получим строку '31.12.2025'
+    });
+    document.getElementById('buttonContainer741').appendChild(button741);
+    
+    const button742 = document.createElement('button'); 
+    button742.innerText = '314_1'; 
+    button742.addEventListener('click', function() {
+        let date = new Date();
+        console.log(date.getDay());
+    });
+    document.getElementById('buttonContainer742').appendChild(button742);
+    
+    const button743 = document.createElement('button');
+    button743.innerText = '314_2';
+    button743.addEventListener('click', function() {
+        let date = new Date();
+        let day = date.getDay();
+        if (day === 0 || day === 6) {
+            console.log("Сегодня выходной день");
+        } else {
+            console.log("Сегодня рабочий день");
+        }
+    });
+    document.getElementById('buttonContainer743').appendChild(button743);
+    
+    const button744 = document.createElement('button');
+    button744.innerText = '314_3';
+    button744.addEventListener('click', function() {
+        let date = new Date();
+        let day = date.getDay();
+        let daysUntilSunday = (7 - day) % 7;
+        console.log(`Дней до ближайшего воскресенья: ${daysUntilSunday}`);
+    });
+    document.getElementById('buttonContainer744').appendChild(button744);
+    
+    const button745 = document.createElement('button'); 
+    button745.innerText = '315_1'; 
+    button745.addEventListener('click', function() {
+        let months = [
+            'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+            'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+        ];
+        let date = new Date();
+        console.log(months[date.getMonth()]);
+    });
+    document.getElementById('buttonContainer745').appendChild(button745);
+    
+    const button746 = document.createElement('button'); 
+    button746.innerText = '316_1'; 
+    button746.addEventListener('click', function() {
+        let birthday = new Date('2006-09-01');
+        let daysOfWeek = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        console.log(`В ваш день рождения был ${daysOfWeek[birthday.getDay()]}`);
+    });
+    document.getElementById('buttonContainer746').appendChild(button746);
+    
+    const button747 = document.createElement('button'); 
+    button747.innerText = '317_1'; 
+    button747.addEventListener('click', function() {
+        let date = new Date('2025-01-01');
+        console.log(date.getTime());
+    });
+    document.getElementById('buttonContainer747').appendChild(button747);
+    
+    const button748 = document.createElement('button'); 
+    button748.innerText = '318_1'; 
+    button748.addEventListener('click', function() {
+        let startDate = new Date('1988-03-01');
+        let endDate = new Date('2000-01-10');
+        let timeDifference = endDate - startDate;
+        let daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        console.log(daysDifference);
+    });
+    document.getElementById('buttonContainer748').appendChild(button748);
+    
+    const button749 = document.createElement('button'); 
+    button749.innerText = '318_2'; 
+    button749.addEventListener('click', function() {
+        let birthday = new Date('2006-09-01');
+        let currentDate = new Date();
+        let monthsDifference = (currentDate.getFullYear() - birthday.getFullYear()) * 12 + (currentDate.getMonth() - birthday.getMonth());
+        console.log(monthsDifference);
+    });
+    document.getElementById('buttonContainer749').appendChild(button749);
     
