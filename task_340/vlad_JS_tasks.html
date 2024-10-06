@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="block">
+        <p>1</p>
+        <p>2</p>
+    </div>
+    
+    <div class="block">
+        <p>1</p>
+        <p>2</p>
+    </div>
+    
+    <p class="www">text</p>
+    <p class="www">text</p>
+
+    <script>
+        let firstParagraphBlockId = document.querySelector('#block p');
+        console.log(firstParagraphBlockId);
+        
+        let firstParagraphBlockClass = document.querySelector('.block p');
+        console.log(firstParagraphBlockClass);
+        
+        let firstParagraphClassWWW = document.querySelector('.www');
+        console.log(firstParagraphClassWWW);
+    </script>
+</body>
+</html>
