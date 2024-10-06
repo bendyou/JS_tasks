@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph and Button Tasks</title>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <p id="paragraph1">Hello, world!</p>
+    <button id="button1">Read Text</button>
+
+    <h3>Task 2</h3>
+    <p id="paragraph2">Old text.</p>
+    <button id="button2">Change Text</button>
+
+    <h3>Task 3</h3>
+    <p id="paragraph3">5</p>
+    <p id="paragraph4">10</p>
+    <button id="button3">Calculate Sum</button>
+
+    <h3>Task 4</h3>
+    <p id="paragraph5">2</p>
+    <p id="paragraph6">3</p>
+    <p id="paragraph7">5</p>
+    <div id="resultDiv"></div>
+    <button id="button4">Sum Numbers</button>
+
+    <h3>Task 5</h3>
+    <p id="paragraph8">4</p>
+    <button id="button5">Increment</button>
+
+    <h3>Task 6</h3>
+    <p id="paragraph9">Hello!</p>
+    <button id="button6">Add Exclamation</button>
+
+    <script>
+        // Task 1
+        document.querySelector('#button1').addEventListener('click', function() {
+            const text = document.querySelector('#paragraph1').innerText;
+            console.log(text);
+        });
+
+        // Task 2
+        document.querySelector('#button2').addEventListener('click', function() {
+            document.querySelector('#paragraph2').innerText = 'New text!';
+        });
+
+        // Task 3
+        document.querySelector('#button3').addEventListener('click', function() {
+            const num1 = parseFloat(document.querySelector('#paragraph3').innerText);
+            const num2 = parseFloat(document.querySelector('#paragraph4').innerText);
+            const sum = num1 + num2;
+            console.log(sum);
+        });
+
+        // Task 4
+        document.querySelector('#button4').addEventListener('click', function() {
+            const num1 = parseFloat(document.querySelector('#paragraph5').innerText);
+            const num2 = parseFloat(document.querySelector('#paragraph6').innerText);
+            const num3 = parseFloat(document.querySelector('#paragraph7').innerText);
+            const sum = num1 + num2 + num3;
+            document.querySelector('#resultDiv').innerText = sum;
+        });
+
+        // Task 5
+        document.querySelector('#button5').addEventListener('click', function() {
+            let number = parseInt(document.querySelector('#paragraph8').innerText);
+            number += 1;
+            document.querySelector('#paragraph8').innerText = number;
+        });
+
+        // Task 6
+        document.querySelector('#button6').addEventListener('click', function() {
+            document.querySelector('#paragraph9').innerText += '!';
+        });
+    </script>
+</body>
+</html>

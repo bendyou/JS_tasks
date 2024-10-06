@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and Bold Text Tasks</title>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <p id="paragraph1">This is <strong>some text</strong>.</p>
+    <button id="button1">Read HTML</button>
+
+    <h3>Task 2</h3>
+    <p id="paragraph2">Old text.</p>
+    <button id="button2">Change Text to Bold</button>
+
+    <script>
+        // Task 1
+        document.querySelector('#button1').addEventListener('click', function() {
+            const html = document.querySelector('#paragraph1').innerHTML;
+            console.log(html);
+        });
+
+        // Task 2
+        document.querySelector('#button2').addEventListener('click', function() {
+            document.querySelector('#paragraph2').innerHTML = '<strong>New bold text!</strong>';
+        });
+    </script>
+</body>
+</html>

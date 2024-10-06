@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Tasks</title>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <input id="elem1" type="email">
+    <button id="button1">Show Type</button>
+
+    <h3>Task 2</h3>
+    <input id="elem2" type="email">
+    <button id="button2">Change Type to Submit</button>
+
+    <h3>Task 3</h3>
+    <a id="link" href="https://example.com">Example Link</a>
+    <button id="button3">Show Href</button>
+    <p id="output3"></p>
+
+    <h3>Task 4</h3>
+    <a id="link2" href="https://example.com">Example Link</a>
+    <button id="button4">Add Href to Link Text</button>
+
+    <h3>Task 5</h3>
+    <img id="image" src="image.jpg" alt="Sample Image">
+    <button id="button5">Show Image Src</button>
+    <p id="output5"></p>
+
+    <h3>Task 6</h3>
+    <img id="image2" src="image.jpg" alt="Sample Image">
+    <button id="button6">Set Width to 300</button>
+
+    <h3>Task 7</h3>
+    <img id="image3" src="image.jpg" alt="Sample Image" width="200">
+    <button id="button7">Double Width</button>
+
+    <h3>Task 8</h3>
+    <img id="image4" alt="Sample Image">
+    <button id="button8">Set Image 1</button>
+    <button id="button9">Set Image 2</button>
+
+    <script>
+        // Task 1
+        document.querySelector('#button1').addEventListener('click', function() {
+            const typeValue = document.querySelector('#elem1').getAttribute('type');
+            console.log(typeValue);
+        });
+
+        // Task 2
+        document.querySelector('#button2').addEventListener('click', function() {
+            document.querySelector('#elem2').setAttribute('type', 'submit');
+        });
+
+        // Task 3
+        document.querySelector('#button3').addEventListener('click', function() {
+            const hrefValue = document.querySelector('#link').getAttribute('href');
+            document.querySelector('#output3').innerText = hrefValue;
+        });
+
+        // Task 4
+        document.querySelector('#button4').addEventListener('click', function() {
+            const hrefValue = document.querySelector('#link2').getAttribute('href');
+            document.querySelector('#link2').innerText += ` (${hrefValue})`;
+        });
+
+        // Task 5
+        document.querySelector('#button5').addEventListener('click', function() {
+            const srcValue = document.querySelector('#image').getAttribute('src');
+            document.querySelector('#output5').innerText = srcValue;
+        });
+
+        // Task 6
+        document.querySelector('#button6').addEventListener('click', function() {
+            document.querySelector('#image2').setAttribute('width', '300');
+        });
+
+        // Task 7
+        document.querySelector('#button7').addEventListener('click', function() {
+            const img = document.querySelector('#image3');
+            const currentWidth = parseInt(img.getAttribute('width'));
+            img.setAttribute('width', currentWidth * 2);
+        });
+
+        // Task 8
+        document.querySelector('#button8').addEventListener('click', function() {
+            document.querySelector('#image4').setAttribute('src', 'image1.jpg');
+        });
+
+        document.querySelector('#button9').addEventListener('click', function() {
+            document.querySelector('#image4').setAttribute('src', 'image2.jpg');
+        });
+    </script>
+</body>
+</html>

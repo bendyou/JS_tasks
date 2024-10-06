@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Focus and Blur Tasks</title>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <input id="input1" type="text">
+
+    <h3>Task 2</h3>
+    <input id="input2" type="number" placeholder="Enter a number">
+
+    <h3>Task 3</h3>
+    <input id="input3" type="text" value="Some text">
+
+    <script>
+        // Task 1
+        const input1 = document.querySelector('#input1');
+        input1.addEventListener('focus', function() {
+            input1.value = 1;
+        });
+        input1.addEventListener('blur', function() {
+            input1.value = 2;
+        });
+
+        // Task 2
+        const input2 = document.querySelector('#input2');
+        input2.addEventListener('blur', function() {
+            const number = parseFloat(input2.value);
+            const square = number * number;
+            alert(`Square: ${square}`);
+        });
+
+        // Task 3
+        const input3 = document.querySelector('#input3');
+        input3.addEventListener('focus', function() {
+            input3.value = '';
+        });
+    </script>
+</body>
+</html>

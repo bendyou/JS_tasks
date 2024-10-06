@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Tasks</title>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <input id="input1" type="text">
+    <button id="button1">Set Text</button>
+
+    <h3>Task 2</h3>
+    <input id="input2" type="text">
+    <button id="button2">Copy to Paragraph</button>
+    <p id="output2"></p>
+
+    <h3>Task 3</h3>
+    <input id="input3" type="number" placeholder="Enter a number">
+    <input id="input4" type="number" placeholder="Square will be here">
+    <button id="button3">Calculate Square</button>
+
+    <h3>Task 4</h3>
+    <input id="input5" type="text" placeholder="First input">
+    <input id="input6" type="text" placeholder="Second input">
+    <button id="button4">Swap Values</button>
+
+    <h3>Task 5</h3>
+    <input id="input7" type="number" placeholder="Number 1">
+    <input id="input8" type="number" placeholder="Number 2">
+    <input id="input9" type="number" placeholder="Number 3">
+    <input id="input10" type="number" placeholder="Number 4">
+    <input id="input11" type="number" placeholder="Number 5">
+    <button id="button5">Calculate Average</button>
+    <p id="output5"></p>
+
+    <script>
+        // Task 1
+        document.querySelector('#button1').addEventListener('click', function() {
+            document.querySelector('#input1').value = 'Some text';
+        });
+
+        // Task 2
+        document.querySelector('#button2').addEventListener('click', function() {
+            const textValue = document.querySelector('#input2').value;
+            document.querySelector('#output2').innerText = textValue;
+        });
+
+        // Task 3
+        document.querySelector('#button3').addEventListener('click', function() {
+            const number = parseFloat(document.querySelector('#input3').value);
+            const square = number * number;
+            document.querySelector('#input4').value = square;
+        });
+
+        // Task 4
+        document.querySelector('#button4').addEventListener('click', function() {
+            const value1 = document.querySelector('#input5').value;
+            const value2 = document.querySelector('#input6').value;
+            document.querySelector('#input5').value = value2;
+            document.querySelector('#input6').value = value1;
+        });
+
+        // Task 5
+        document.querySelector('#button5').addEventListener('click', function() {
+            const values = [
+                parseFloat(document.querySelector('#input7').value) || 0,
+                parseFloat(document.querySelector('#input8').value) || 0,
+                parseFloat(document.querySelector('#input9').value) || 0,
+                parseFloat(document.querySelector('#input10').value) || 0,
+                parseFloat(document.querySelector('#input11').value) || 0
+            ];
+            const sum = values.reduce((acc, val) => acc + val, 0);
+            const average = sum / values.length;
+            document.querySelector('#output5').innerText = `Average: ${average}`;
+        });
+    </script>
+</body>
+</html>
