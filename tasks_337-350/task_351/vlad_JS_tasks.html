@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Focus and Blur Tasks</title>
+</head>
+<body>
+    <div id="elem1" class="content no-gap"></div>
+    <div id="elem2"></div>
+    <div id="elem3" class="aaa bbb ccc"></div>
+    
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <button id="btn3">3</button>
+    
+    <script>
+      // №1
+      document.querySelector('#btn1').addEventListener('click', function() {
+        let elem = document.querySelector('#elem1');
+        console.log(elem.className);
+      });
+    
+      // №2
+      document.querySelector('#btn2').addEventListener('click', function() {
+        let elem = document.querySelector('#elem2');
+        elem.className = 'new-class';
+      });
+    
+      // №3
+      document.querySelector('#btn3').addEventListener('click', function() {
+        let elem = document.querySelector('#elem3');
+        let classArray = elem.className.split(' ');
+        console.log(classArray);
+      });
+    </script>
+</body>
+</html>
