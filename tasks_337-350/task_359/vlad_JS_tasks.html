@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+  <a id="link" href="https://example.com">My Link</a>
+  <input id="addHrefButton" type="button" value="Add href to link">
+  
+  <br><br>
+  
+  <input id="counterButton" type="button" value="1">
+  
+  <script>
+    // №1: Добавление атрибута href к ссылке
+    let link = document.querySelector('#link');
+    let addHrefButton = document.querySelector('#addHrefButton');
+  
+    addHrefButton.addEventListener('click', function() {
+      link.textContent += ` (${link.getAttribute('href')})`;
+      this.removeEventListener('click', arguments.callee);
+    });
+  
+    // №2: Увеличение значения кнопки до 10
+    let counterButton = document.querySelector('#counterButton');
+  
+    counterButton.addEventListener('click', function() {
+      this.value = Number(this.value) + 1;
+      if (this.value >= 10) {
+        this.removeEventListener('click', arguments.callee);
+      }
+    });
+  </script>  
+</body>
+</html>

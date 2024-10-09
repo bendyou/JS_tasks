@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+  <input type="text" class="input" value="1">
+  <input type="text" class="input" value="2">
+  <input type="text" class="input" value="3">
+  
+  <p class="number">2</p>
+  <p class="number">3</p>
+  <p class="number">4</p>
+  
+  <script>
+    // №1: Увеличение значения инпута на 1 при потере фокуса
+    document.querySelectorAll('.input').forEach(function(input) {
+      input.addEventListener('blur', function() {
+        this.value = Number(this.value) + 1;
+      });
+    });
+  
+    // №2: Возведение числа в квадрат при клике на абзац
+    document.querySelectorAll('.number').forEach(function(paragraph) {
+      paragraph.addEventListener('click', function() {
+        this.textContent = Math.pow(Number(this.textContent), 2);
+      });
+    });
+  </script>   
+</body>
+</html>

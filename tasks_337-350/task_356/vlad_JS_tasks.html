@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+  <p class="paragraph">Первый абзац</p>
+  <p class="paragraph">Второй абзац</p>
+  <p class="paragraph">Третий абзац</p>
+  <button id="button1">Изменить текст абзацев на 'text'</button>
+  
+  <p class="paragraph">Абзац с текстом 1</p>
+  <p class="paragraph">Абзац с текстом 2</p>
+  <p class="paragraph">Абзац с текстом 3</p>
+  <button id="button2">Добавить порядковый номер к текстам абзацев</button>
+  
+  <input class="input" type="text" value="5">
+  <input class="input" type="text" value="10">
+  <input class="input" type="text" value="15">
+  <p id="sum">Сумма: </p>
+  <button id="button3">Посчитать сумму</button>
+  
+  <script>
+    // №1: Установить текст каждого абзаца в 'text'
+    document.querySelector('#button1').addEventListener('click', function() {
+      let paragraphs = document.querySelectorAll('.paragraph');
+      for (let paragraph of paragraphs) {
+        paragraph.textContent = 'text';
+      }
+    });
+  
+    // №2: Добавить порядковый номер в конец каждого абзаца
+    document.querySelector('#button2').addEventListener('click', function() {
+      let paragraphs = document.querySelectorAll('.paragraph');
+      paragraphs.forEach(function(paragraph, index) {
+        paragraph.textContent += ` ${index + 1}`;
+      });
+    });
+  
+    // №3: Найти сумму чисел из инпутов и записать в абзац
+    document.querySelector('#button3').addEventListener('click', function() {
+      let inputs = document.querySelectorAll('.input');
+      let sum = 0;
+      for (let input of inputs) {
+        sum += Number(input.value);
+      }
+      document.querySelector('#sum').textContent = `Сумма: ${sum}`;
+    });
+  </script>  
+</body>
+</html>

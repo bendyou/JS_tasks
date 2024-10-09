@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+  <input id="elem" value="">
+  <button id="btn">1</button>
+  
+  <script>
+    // №1: Ввод числа при фокусе и потере фокуса инпутом
+    document.querySelector('#elem').addEventListener('focus', function() {
+      this.value = 1;
+    });
+  
+    document.querySelector('#elem').addEventListener('blur', function() {
+      this.value = 2;
+    });
+  
+    // №2: Увеличение значения кнопки на единицу при каждом клике
+    document.querySelector('#btn').addEventListener('click', function() {
+      this.innerText = parseInt(this.innerText) + 1;
+    });
+  </script>
+</body>
+</html>

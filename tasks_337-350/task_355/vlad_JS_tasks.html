@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+  <p class="paragraph">Первый абзац</p>
+  <p class="paragraph">Второй абзац</p>
+  <p class="paragraph">Третий абзац</p>
+  <p class="paragraph">Четвёртый абзац</p>
+  <p class="paragraph">Пятый абзац</p>
+  
+  <input class="input" type="text" value="2">
+  <input class="input" type="text" value="3">
+  <input class="input" type="text" value="4">
+  
+  <script>
+    // №1: Добавление восклицательного знака по клику на абзац
+    document.querySelectorAll('.paragraph').forEach(function(paragraph) {
+      paragraph.addEventListener('click', function() {
+        this.textContent += '!';
+      });
+    });
+  
+    // №2: Возведение числа в квадрат при потере фокуса
+    document.querySelectorAll('.input').forEach(function(input) {
+      input.addEventListener('blur', function() {
+        this.value = Math.pow(this.value, 2);
+      });
+    });
+  </script>
+</body>
+</html>
