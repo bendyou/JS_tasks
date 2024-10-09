@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+    <button>click</button>
+    
+    <script>
+    let button = document.querySelector('button');
+    let elems = document.querySelectorAll('p');
+    
+    button.addEventListener('click', function() {
+        for (let elem of elems) {
+            elem.innerHTML = '<b>' + elem.textContent + '</b>'; // Исправлено: теперь правильно добавляем жирный текст
+        }
+    });
+    </script>
+    
+</body>
+</html>

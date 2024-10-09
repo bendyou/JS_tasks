@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+    <input id="inp">
+
+    <script>
+    let inp = document.querySelector('#inp');
+    
+    inp.addEventListener('blur', function() {
+        let digits = inp.value.split('').map(Number); // Исправлено: используем inp.value и преобразуем в массив
+        let sum = 0;
+        
+        for (let digit of digits) {
+            sum += digit;
+        }
+        
+        console.log(sum);
+    });
+    </script>
+    
+</body>
+</html>
